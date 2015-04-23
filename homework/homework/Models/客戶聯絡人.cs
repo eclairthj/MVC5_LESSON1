@@ -12,7 +12,7 @@ namespace homework.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    
+
     public partial class 客戶聯絡人
     {
         public int Id { get; set; }
@@ -27,7 +27,8 @@ namespace homework.Models
         public string Email { get; set; }
         public string 手機 { get; set; }
         public string 電話 { get; set; }
-    
+        public Nullable<bool> 是否已刪除 { get; set; }
+
         public virtual 客戶資料 客戶資料 { get; set; }
     }
 }

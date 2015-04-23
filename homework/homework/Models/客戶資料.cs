@@ -32,8 +32,9 @@ namespace homework.Models
         public string 傳真 { get; set; }
         public string 地址 { get; set; }
         [Required]
-        [DataType(DataType.EmailAddress, ErrorMessage = "E-mail is not valid")]
+        [DataType(DataType.EmailAddress, ErrorMessage = "請輸入正確的電子信箱")]
         public string Email { get; set; }
+        public Nullable<bool> 是否已刪除 { get; set; }
 
         public virtual ICollection<客戶銀行資訊> 客戶銀行資訊 { get; set; }
         public virtual ICollection<客戶聯絡人> 客戶聯絡人 { get; set; }
