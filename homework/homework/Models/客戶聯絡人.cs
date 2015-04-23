@@ -11,13 +11,19 @@ namespace homework.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class 客戶聯絡人
     {
         public int Id { get; set; }
+        [Required]
         public int 客戶Id { get; set; }
+        [Required]
         public string 職稱 { get; set; }
+        [Required]
         public string 姓名 { get; set; }
+        [Required]
+        [DataType(DataType.EmailAddress, ErrorMessage = "E-mail is not valid")]
         public string Email { get; set; }
         public string 手機 { get; set; }
         public string 電話 { get; set; }
